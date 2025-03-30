@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+# Debug: Print environment variable
+st.write("API Key loaded:", bool(os.getenv("DEEPSEEK_API_KEY")))
+
 # Initialize the OpenAI client with DeepSeek API
 client = OpenAI(
     api_key=os.getenv("DEEPSEEK_API_KEY"),
